@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh ubuntu@128.199.113.235 <<EOF
+ cd ~/node-jenkins
+ git pull
+ npm install — production
+ pm2 restart all
+ exit
+EOF
